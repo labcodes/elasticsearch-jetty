@@ -69,7 +69,7 @@ public class JettyHttpServerRestChannel implements HttpChannel {
             // Allow Ajax requests based on the CORS "preflight" request
             resp.addHeader("Access-Control-Max-Age", "1728000");
             resp.addHeader("Access-Control-Allow-Methods", "OPTIONS, HEAD, GET, POST, PUT, DELETE");
-            resp.addHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Content-Length");
+            resp.addHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Content-Length, Authorization");
         }
         try {
             int contentLength = response.contentLength();
